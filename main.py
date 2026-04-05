@@ -5,15 +5,8 @@ import random
 import calendar  # Обов'язково додайте цей рядок!
 from datetime import datetime, timedelta
 
-# --- ПІДКЛЮЧЕННЯ GOOGLE SHEETS ---
-SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/1aoIactómBabATa0SHLJCWnOBKwITy74kLkJgItQMKNc/edit"
-# ... далі ваш код
-
-# --- ПІДКЛЮЧЕННЯ GOOGLE SHEETS ---
-# Це посилання обов'язково має бути в коді
-SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/1aoIactómBabATa0SHLJCWnOBKwITy74kLkJgItQMKNc/edit"
-
-from streamlit_gsheets import GSheetsConnection
+# Ініціалізація з'єднання з Google Sheets
+conn = st.connection("gsheets", type=GSheetsConnection)
 
 def load_sheet(sheet_name):
     try:
