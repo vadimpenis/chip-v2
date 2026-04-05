@@ -1,3 +1,4 @@
+setuptools
 streamlit==1.31.0
 pandas
 st-gsheets-connection==0.0.3
