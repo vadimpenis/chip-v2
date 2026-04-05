@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/1aoIact6mBaBaTa8SHLJChvOBKwlTy74kLkjgltQMKNc/edit"
 
 # Ініціалізація з'єднання з Google Sheets
-conn = st.connection("gsheets", type=GSheetsConnection)
+conn = st.connection("gsheets", type=GSheetsConnection, ttl=0)
 
 def load_sheet(sheet_name):
     try:
